@@ -2,7 +2,8 @@ const express = require("express")
 const app = express()
 
 //rotas
-const alunas = require("./routes/tarefas")
+const index = require("./routes/index")
+const tarefa = require("./routes/tarefaRoute")
 
 
 app.use(function(req, res, next) {
@@ -15,7 +16,7 @@ app.use(function(req, res, next) {
 })
 
 app.use("/", index)
-app.use("/tarefas", tarefas)
+app.use("/tarefa", tarefa)
 
 
 module.exports = app
