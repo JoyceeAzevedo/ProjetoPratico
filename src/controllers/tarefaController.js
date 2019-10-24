@@ -12,13 +12,19 @@ exports.getById = (req, res) => {
   res.status(200).send(tarefa.filter(tarefa=> tarefa.id == id))
 }
 
-
-exports.getColabTarefa = (req, res) => {
-  const RealizouTarefa = tarefa.filter(tarefa => {
-    console.log(aluna)
-    return aluna.nasceuEmSp == "true"
-  })
-  const meninasSp = nasceuSp.map(aluna => aluna.nome)
-
-  res.status(200).send(meninasSp)
+exports.getByTarefa= (req, res) => {
+  const tarefaRealizada = tarefa.filter(item => item.concluido == "true")
+  const realizadaTarefa = tarefaRealizada.map(item => item.descricao )
+  
+  res.status(200).send (realizadaTarefa)
 }
+
+exports.getByColaborador= (req, res) => {
+
+  const nomeColaborador = req.params.nomeColaborador
+  const buscarColaborador = tarefa.filter(item => item.nomeColaborador == nomeColaborador )
+  
+  res.status(200).send (buscarColaborador)
+}
+
+

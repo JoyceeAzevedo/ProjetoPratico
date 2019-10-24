@@ -16,7 +16,7 @@ app.use(function(req, res, next) {
 })
 
 app.use("/", index)
-app.use("/tarefa", tarefa)
+app.use("/tarefas", tarefa)
 
 
 module.exports = app
