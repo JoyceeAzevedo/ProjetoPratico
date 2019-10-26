@@ -8,8 +8,7 @@ O Projeto tem como objetivo demonstrar de forma prática o conhecimento adquirid
 + Tecnologias utilizadas
 - JavaScript e Node.Js
 
-+ Tecnologias utilizadas
-- JavaScript e Node.Js
+
 
 
 
